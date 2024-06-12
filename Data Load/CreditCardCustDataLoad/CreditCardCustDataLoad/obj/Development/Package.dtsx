@@ -1,0 +1,2488 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/12/2024 8:41:07 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="JYOSHNA"
+  DTS:CreatorName="JYOSHNA\jyosh"
+  DTS:DTSID="{A7E8781C-5B63-4BFB-AC68-856732A2CD41}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5467.0"
+  DTS:LocaleID="16393"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="1"
+  DTS:VersionGUID="{4D542FEA-DBC1-4012-8B54-8F14C8DB886F}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[CC Details 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{B6786F76-0181-4950-A9B0-A4A325EF7444}"
+      DTS:ObjectName="CC Details 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="16393"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\jyosh\Downloads\Credit_Card_Financial_Dashboard-main\Credit_Card_Financial_Dashboard-main\credit_card.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Client_Num"
+              DTS:DTSID="{C59F09F4-6047-4296-AC0F-0CD8842DD84C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Card_Category"
+              DTS:DTSID="{6EE82AC2-81B3-40F1-9821-DED2A674F08F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Annual_Fees"
+              DTS:DTSID="{F89BD29C-73A1-40C2-A8A0-193CF5A546D3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="11"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Activation_30_Days"
+              DTS:DTSID="{A978E9F5-DF28-4D30-8D7F-8D015F25C55A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Customer_Acq_Cost"
+              DTS:DTSID="{06F25D78-5E7E-4812-88C5-C6D3FEC72D56}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Week_Start_Date"
+              DTS:DTSID="{A369C521-842C-43C7-97C0-B3D3707608DF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Week_Num"
+              DTS:DTSID="{55A8CA13-36FC-4C76-936B-F40CF10FE7D8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="2"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Qtr"
+              DTS:DTSID="{90F9817D-871D-4D9E-B41C-C3B757BCF021}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="current_year"
+              DTS:DTSID="{20738023-7BB3-4F11-9B1F-A7B2E717AA14}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Credit_Limit"
+              DTS:DTSID="{F312B8D4-9CB8-4F43-8F9C-37C580E384D8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Total_Revolving_Bal"
+              DTS:DTSID="{0F432538-5E3E-4857-BB11-D4F2783066EB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Total_Trans_Amt"
+              DTS:DTSID="{5EBAFC43-E6C3-4DDE-9F7C-E36BD7C1774A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Total_Trans_Vol"
+              DTS:DTSID="{58D3AE2B-356F-49DF-ABBC-004DFA536D35}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Avg_Utilization_Ratio"
+              DTS:DTSID="{912E6E20-50F7-4F14-9960-7FC445D8C5AE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Use Chip"
+              DTS:DTSID="{DB9889D3-7E9B-4341-A9F6-214346036012}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Exp Type"
+              DTS:DTSID="{6FB54C0B-BD14-452D-84CB-B7A3CDFC432A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Interest_Earned"
+              DTS:DTSID="{3DC0BD2F-820C-4EE9-BD87-7760D3D954FD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="11"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Delinquent_Acc"
+              DTS:DTSID="{AB6EA59A-4639-44A7-ADE8-A6B77EA51E29}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[CC Details 2]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{6A3E2BD9-E153-42A5-A626-8246C7B2FBE8}"
+      DTS:ObjectName="CC Details 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="16393"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\jyosh\Downloads\Credit_Card_Financial_Dashboard-main\Credit_Card_Financial_Dashboard-main\cc_add.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Client_Num"
+              DTS:DTSID="{9CBB2EF0-40CD-448F-B864-C0A492DE41A6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Card_Category"
+              DTS:DTSID="{E1F85E14-C9FF-4795-A0C1-2D989D16415B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Annual_Fees"
+              DTS:DTSID="{088B4B63-C9D6-4230-9573-C8C83D163819}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="11"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Activation_30_Days"
+              DTS:DTSID="{2CF5E2B4-60E0-4824-9BF4-60457E8B9250}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Customer_Acq_Cost"
+              DTS:DTSID="{078F9385-195E-4BCE-AAFD-1CFD6FFA0BFA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Week_Start_Date"
+              DTS:DTSID="{77CB551A-E405-4FAE-A916-EAF01AE2FCC5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Week_Num"
+              DTS:DTSID="{0BB2E7D0-8FB6-4B31-98AC-7636C8A6E38C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="2"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Qtr"
+              DTS:DTSID="{A38BF7DA-3192-4334-A847-61A98BF47BE6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="current_year"
+              DTS:DTSID="{9A570E56-AD5E-4281-AA6A-792E03FABD8A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Credit_Limit"
+              DTS:DTSID="{D97E962A-B46E-4D80-AA5C-0374F24B30A4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Total_Revolving_Bal"
+              DTS:DTSID="{B20A3B92-9554-40EA-A9E0-FCDA3BC1D055}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Total_Trans_Amt"
+              DTS:DTSID="{9FB0FD6B-ED41-4ADD-B868-01A9A9418EA1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Total_Trans_Ct"
+              DTS:DTSID="{864DECBC-23B1-4615-B97A-17B2DC1A0671}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Avg_Utilization_Ratio"
+              DTS:DTSID="{35BE6B1B-F243-483F-8827-EDFD97450180}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Use Chip"
+              DTS:DTSID="{DD9EE57F-1A87-4611-9360-8290912112A3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Exp Type"
+              DTS:DTSID="{08D1249D-5E4C-464D-8F33-9F687AFB95B5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Interest_Earned"
+              DTS:DTSID="{82CDEA3C-3595-4F5B-8A0F-E70C41EEFEF1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="11"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Delinquent_Acc"
+              DTS:DTSID="{40C7DC5E-87E3-405C-8D30-80C6EAFB21BC}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[JYOSHNA\SIVA_DEV.CCBD]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{EBAA838C-ADBF-454D-A02C-D20BE57AD5C3}"
+      DTS:ObjectName="JYOSHNA\SIVA_DEV.CCBD">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=JYOSHNA\SIVA_DEV;Initial Catalog=CCBD;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{EBAA838C-ADBF-454D-A02C-D20BE57AD5C3}JYOSHNA\SIVA_DEV.CCBD;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\CustomerDetail Load"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{B1A4C4D0-9C4F-4758-9240-3D9D67D5978C}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="CustomerDetail Load"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\CustomerDetail Load\Credit Card Details 2"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="16393"
+              name="Credit Card Details 2"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\CustomerDetail Load\Credit Card Details 2.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[CC Details 2]"
+                  connectionManagerRefId="Package.ConnectionManagers[CC Details 2]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Client_Num]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].ExternalColumns[Client_Num]"
+                      lineageId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Client_Num]"
+                      name="Client_Num"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Card_Category]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].ExternalColumns[Card_Category]"
+                      length="10"
+                      lineageId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Card_Category]"
+                      name="Card_Category"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Annual_Fees]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].ExternalColumns[Annual_Fees]"
+                      lineageId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Annual_Fees]"
+                      name="Annual_Fees"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Activation_30_Days]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].ExternalColumns[Activation_30_Days]"
+                      lineageId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Activation_30_Days]"
+                      name="Activation_30_Days"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Customer_Acq_Cost]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].ExternalColumns[Customer_Acq_Cost]"
+                      lineageId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Customer_Acq_Cost]"
+                      name="Customer_Acq_Cost"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Week_Start_Date]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].ExternalColumns[Week_Start_Date]"
+                      lineageId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Week_Start_Date]"
+                      name="Week_Start_Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Week_Num]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].ExternalColumns[Week_Num]"
+                      length="50"
+                      lineageId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Week_Num]"
+                      name="Week_Num"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Qtr]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].ExternalColumns[Qtr]"
+                      length="2"
+                      lineageId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Qtr]"
+                      name="Qtr"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[current_year]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].ExternalColumns[current_year]"
+                      lineageId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[current_year]"
+                      name="current_year"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Credit_Limit]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].ExternalColumns[Credit_Limit]"
+                      lineageId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Credit_Limit]"
+                      name="Credit_Limit"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Total_Revolving_Bal]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].ExternalColumns[Total_Revolving_Bal]"
+                      lineageId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Total_Revolving_Bal]"
+                      name="Total_Revolving_Bal"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Total_Trans_Amt]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].ExternalColumns[Total_Trans_Amt]"
+                      lineageId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Total_Trans_Amt]"
+                      name="Total_Trans_Amt"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Total_Trans_Ct]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].ExternalColumns[Total_Trans_Ct]"
+                      lineageId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Total_Trans_Ct]"
+                      name="Total_Trans_Ct"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Avg_Utilization_Ratio]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].ExternalColumns[Avg_Utilization_Ratio]"
+                      lineageId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Avg_Utilization_Ratio]"
+                      name="Avg_Utilization_Ratio"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Use Chip]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].ExternalColumns[Use Chip]"
+                      length="20"
+                      lineageId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Use Chip]"
+                      name="Use Chip"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Exp Type]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].ExternalColumns[Exp Type]"
+                      length="50"
+                      lineageId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Exp Type]"
+                      name="Exp Type"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Interest_Earned]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].ExternalColumns[Interest_Earned]"
+                      lineageId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Interest_Earned]"
+                      name="Interest_Earned"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Delinquent_Acc]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].ExternalColumns[Delinquent_Acc]"
+                      lineageId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Delinquent_Acc]"
+                      name="Delinquent_Acc"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].ExternalColumns[Client_Num]"
+                      dataType="i4"
+                      name="Client_Num" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].ExternalColumns[Card_Category]"
+                      dataType="wstr"
+                      length="10"
+                      name="Card_Category" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].ExternalColumns[Annual_Fees]"
+                      dataType="i2"
+                      name="Annual_Fees" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].ExternalColumns[Activation_30_Days]"
+                      dataType="bool"
+                      name="Activation_30_Days" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].ExternalColumns[Customer_Acq_Cost]"
+                      dataType="i2"
+                      name="Customer_Acq_Cost" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].ExternalColumns[Week_Start_Date]"
+                      dataType="date"
+                      name="Week_Start_Date" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].ExternalColumns[Week_Num]"
+                      dataType="wstr"
+                      length="50"
+                      name="Week_Num" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].ExternalColumns[Qtr]"
+                      dataType="wstr"
+                      length="2"
+                      name="Qtr" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].ExternalColumns[current_year]"
+                      dataType="i2"
+                      name="current_year" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].ExternalColumns[Credit_Limit]"
+                      dataType="r4"
+                      name="Credit_Limit" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].ExternalColumns[Total_Revolving_Bal]"
+                      dataType="i2"
+                      name="Total_Revolving_Bal" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].ExternalColumns[Total_Trans_Amt]"
+                      dataType="cy"
+                      name="Total_Trans_Amt" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].ExternalColumns[Total_Trans_Ct]"
+                      dataType="i4"
+                      name="Total_Trans_Ct" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].ExternalColumns[Avg_Utilization_Ratio]"
+                      dataType="r4"
+                      name="Avg_Utilization_Ratio" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].ExternalColumns[Use Chip]"
+                      dataType="wstr"
+                      length="20"
+                      name="Use Chip" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].ExternalColumns[Exp Type]"
+                      dataType="wstr"
+                      length="50"
+                      name="Exp Type" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].ExternalColumns[Interest_Earned]"
+                      dataType="r4"
+                      name="Interest_Earned" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].ExternalColumns[Delinquent_Acc]"
+                      dataType="bool"
+                      name="Delinquent_Acc" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\CustomerDetail Load\CreditCardDetail 1"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="16393"
+              name="CreditCardDetail 1"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\CustomerDetail Load\CreditCardDetail 1.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[CC Details 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[CC Details 1]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Client_Num]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].ExternalColumns[Client_Num]"
+                      lineageId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Client_Num]"
+                      name="Client_Num"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Card_Category]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].ExternalColumns[Card_Category]"
+                      length="10"
+                      lineageId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Card_Category]"
+                      name="Card_Category"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Annual_Fees]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].ExternalColumns[Annual_Fees]"
+                      lineageId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Annual_Fees]"
+                      name="Annual_Fees"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Activation_30_Days]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].ExternalColumns[Activation_30_Days]"
+                      lineageId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Activation_30_Days]"
+                      name="Activation_30_Days"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Customer_Acq_Cost]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].ExternalColumns[Customer_Acq_Cost]"
+                      lineageId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Customer_Acq_Cost]"
+                      name="Customer_Acq_Cost"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Week_Start_Date]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].ExternalColumns[Week_Start_Date]"
+                      lineageId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Week_Start_Date]"
+                      name="Week_Start_Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Week_Num]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].ExternalColumns[Week_Num]"
+                      length="10"
+                      lineageId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Week_Num]"
+                      name="Week_Num"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Qtr]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].ExternalColumns[Qtr]"
+                      length="2"
+                      lineageId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Qtr]"
+                      name="Qtr"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[current_year]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].ExternalColumns[current_year]"
+                      lineageId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[current_year]"
+                      name="current_year"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Credit_Limit]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].ExternalColumns[Credit_Limit]"
+                      lineageId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Credit_Limit]"
+                      name="Credit_Limit"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Total_Revolving_Bal]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].ExternalColumns[Total_Revolving_Bal]"
+                      lineageId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Total_Revolving_Bal]"
+                      name="Total_Revolving_Bal"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Total_Trans_Amt]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].ExternalColumns[Total_Trans_Amt]"
+                      lineageId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Total_Trans_Amt]"
+                      name="Total_Trans_Amt"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Total_Trans_Vol]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].ExternalColumns[Total_Trans_Vol]"
+                      lineageId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Total_Trans_Vol]"
+                      name="Total_Trans_Vol"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Avg_Utilization_Ratio]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].ExternalColumns[Avg_Utilization_Ratio]"
+                      lineageId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Avg_Utilization_Ratio]"
+                      name="Avg_Utilization_Ratio"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Use Chip]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].ExternalColumns[Use Chip]"
+                      length="20"
+                      lineageId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Use Chip]"
+                      name="Use Chip"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Exp Type]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].ExternalColumns[Exp Type]"
+                      length="50"
+                      lineageId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Exp Type]"
+                      name="Exp Type"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Interest_Earned]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].ExternalColumns[Interest_Earned]"
+                      lineageId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Interest_Earned]"
+                      name="Interest_Earned"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Delinquent_Acc]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].ExternalColumns[Delinquent_Acc]"
+                      lineageId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Delinquent_Acc]"
+                      name="Delinquent_Acc"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].ExternalColumns[Client_Num]"
+                      dataType="i4"
+                      name="Client_Num" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].ExternalColumns[Card_Category]"
+                      dataType="wstr"
+                      length="10"
+                      name="Card_Category" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].ExternalColumns[Annual_Fees]"
+                      dataType="i2"
+                      name="Annual_Fees" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].ExternalColumns[Activation_30_Days]"
+                      dataType="bool"
+                      name="Activation_30_Days" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].ExternalColumns[Customer_Acq_Cost]"
+                      dataType="i2"
+                      name="Customer_Acq_Cost" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].ExternalColumns[Week_Start_Date]"
+                      dataType="date"
+                      name="Week_Start_Date" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].ExternalColumns[Week_Num]"
+                      dataType="wstr"
+                      length="10"
+                      name="Week_Num" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].ExternalColumns[Qtr]"
+                      dataType="wstr"
+                      length="2"
+                      name="Qtr" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].ExternalColumns[current_year]"
+                      dataType="i2"
+                      name="current_year" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].ExternalColumns[Credit_Limit]"
+                      dataType="r4"
+                      name="Credit_Limit" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].ExternalColumns[Total_Revolving_Bal]"
+                      dataType="i2"
+                      name="Total_Revolving_Bal" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].ExternalColumns[Total_Trans_Amt]"
+                      dataType="cy"
+                      name="Total_Trans_Amt" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].ExternalColumns[Total_Trans_Vol]"
+                      dataType="i4"
+                      name="Total_Trans_Vol" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].ExternalColumns[Avg_Utilization_Ratio]"
+                      dataType="r4"
+                      name="Avg_Utilization_Ratio" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].ExternalColumns[Use Chip]"
+                      dataType="wstr"
+                      length="20"
+                      name="Use Chip" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].ExternalColumns[Exp Type]"
+                      dataType="wstr"
+                      length="50"
+                      name="Exp Type" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].ExternalColumns[Interest_Earned]"
+                      dataType="r4"
+                      name="Interest_Earned" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].ExternalColumns[Delinquent_Acc]"
+                      dataType="bool"
+                      name="Delinquent_Acc" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\CustomerDetail Load\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[CreditCradDetail]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\CustomerDetail Load\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[JYOSHNA\SIVA_DEV.CCBD]"
+                  connectionManagerRefId="Package.ConnectionManagers[JYOSHNA\SIVA_DEV.CCBD]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Client_Num]"
+                      cachedDataType="i4"
+                      cachedName="Client_Num"
+                      externalMetadataColumnId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Client_Num]"
+                      lineageId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Client_Num]" />
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Card_Category]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="Card_Category"
+                      externalMetadataColumnId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Card_Category]"
+                      lineageId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Card_Category]" />
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Annual_Fees]"
+                      cachedDataType="i2"
+                      cachedName="Annual_Fees"
+                      externalMetadataColumnId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Annual_Fees]"
+                      lineageId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Annual_Fees]" />
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Activation_30_Days]"
+                      cachedDataType="bool"
+                      cachedName="Activation_30_Days"
+                      externalMetadataColumnId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Activation_30_Days]"
+                      lineageId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Activation_30_Days]" />
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Customer_Acq_Cost]"
+                      cachedDataType="i2"
+                      cachedName="Customer_Acq_Cost"
+                      externalMetadataColumnId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Customer_Acq_Cost]"
+                      lineageId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Customer_Acq_Cost]" />
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Week_Start_Date]"
+                      cachedDataType="date"
+                      cachedName="Week_Start_Date"
+                      externalMetadataColumnId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Week_Start_Date]"
+                      lineageId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Week_Start_Date]" />
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Week_Num]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Week_Num"
+                      externalMetadataColumnId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Week_Num]"
+                      lineageId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Week_Num]" />
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Qtr]"
+                      cachedDataType="wstr"
+                      cachedLength="2"
+                      cachedName="Qtr"
+                      externalMetadataColumnId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Qtr]"
+                      lineageId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Qtr]" />
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[current_year]"
+                      cachedDataType="i2"
+                      cachedName="current_year"
+                      externalMetadataColumnId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[current_year]"
+                      lineageId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[current_year]" />
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Credit_Limit]"
+                      cachedDataType="r4"
+                      cachedName="Credit_Limit"
+                      externalMetadataColumnId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Credit_Limit]"
+                      lineageId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Credit_Limit]" />
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Total_Revolving_Bal]"
+                      cachedDataType="i2"
+                      cachedName="Total_Revolving_Bal"
+                      externalMetadataColumnId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Total_Revolving_Bal]"
+                      lineageId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Total_Revolving_Bal]" />
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Total_Trans_Amt]"
+                      cachedDataType="cy"
+                      cachedName="Total_Trans_Amt"
+                      externalMetadataColumnId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Total_Trans_Amt]"
+                      lineageId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Total_Trans_Amt]" />
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Total_Trans_Vol]"
+                      cachedDataType="i4"
+                      cachedName="Total_Trans_Vol"
+                      externalMetadataColumnId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Total_Trans_Vol]"
+                      lineageId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Total_Trans_Vol]" />
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Avg_Utilization_Ratio]"
+                      cachedDataType="r4"
+                      cachedName="Avg_Utilization_Ratio"
+                      externalMetadataColumnId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Avg_Utilization_Ratio]"
+                      lineageId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Avg_Utilization_Ratio]" />
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Use Chip]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="Use Chip"
+                      externalMetadataColumnId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Use Chip]"
+                      lineageId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Use Chip]" />
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Exp Type]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Exp Type"
+                      externalMetadataColumnId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Exp Type]"
+                      lineageId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Exp Type]" />
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Interest_Earned]"
+                      cachedDataType="r4"
+                      cachedName="Interest_Earned"
+                      externalMetadataColumnId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Interest_Earned]"
+                      lineageId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Interest_Earned]" />
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Delinquent_Acc]"
+                      cachedDataType="bool"
+                      cachedName="Delinquent_Acc"
+                      externalMetadataColumnId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Delinquent_Acc]"
+                      lineageId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Delinquent_Acc]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Client_Num]"
+                      dataType="i4"
+                      name="Client_Num" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Card_Category]"
+                      dataType="wstr"
+                      length="10"
+                      name="Card_Category" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Annual_Fees]"
+                      dataType="i2"
+                      name="Annual_Fees" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Activation_30_Days]"
+                      dataType="bool"
+                      name="Activation_30_Days" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Customer_Acq_Cost]"
+                      dataType="i2"
+                      name="Customer_Acq_Cost" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Week_Start_Date]"
+                      dataType="dbTimeStamp"
+                      name="Week_Start_Date" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Week_Num]"
+                      dataType="wstr"
+                      length="50"
+                      name="Week_Num" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Qtr]"
+                      dataType="wstr"
+                      length="2"
+                      name="Qtr" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[current_year]"
+                      dataType="i2"
+                      name="current_year" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Credit_Limit]"
+                      dataType="r4"
+                      name="Credit_Limit" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Total_Revolving_Bal]"
+                      dataType="i2"
+                      name="Total_Revolving_Bal" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Total_Trans_Amt]"
+                      dataType="cy"
+                      name="Total_Trans_Amt" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Total_Trans_Vol]"
+                      dataType="i4"
+                      name="Total_Trans_Vol" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Avg_Utilization_Ratio]"
+                      dataType="r4"
+                      name="Avg_Utilization_Ratio" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Use Chip]"
+                      dataType="wstr"
+                      length="20"
+                      name="Use Chip" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Exp Type]"
+                      dataType="wstr"
+                      length="50"
+                      name="Exp Type" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Interest_Earned]"
+                      dataType="r4"
+                      name="Interest_Earned" />
+                    <externalMetadataColumn
+                      refId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Delinquent_Acc]"
+                      dataType="bool"
+                      name="Delinquent_Acc" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\CustomerDetail Load\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\CustomerDetail Load\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\CustomerDetail Load\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\CustomerDetail Load\Union All"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+              name="Union All"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\CustomerDetail Load\Union All.Inputs[Union All Input 1]"
+                  name="Union All Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\Union All.Inputs[Union All Input 1].Columns[Client_Num]"
+                      cachedDataType="i4"
+                      cachedName="Client_Num"
+                      lineageId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Client_Num]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Client_Num]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\Union All.Inputs[Union All Input 1].Columns[Card_Category]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="Card_Category"
+                      lineageId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Card_Category]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Card_Category]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\Union All.Inputs[Union All Input 1].Columns[Annual_Fees]"
+                      cachedDataType="i2"
+                      cachedName="Annual_Fees"
+                      lineageId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Annual_Fees]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Annual_Fees]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\Union All.Inputs[Union All Input 1].Columns[Activation_30_Days]"
+                      cachedDataType="bool"
+                      cachedName="Activation_30_Days"
+                      lineageId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Activation_30_Days]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Activation_30_Days]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\Union All.Inputs[Union All Input 1].Columns[Customer_Acq_Cost]"
+                      cachedDataType="i2"
+                      cachedName="Customer_Acq_Cost"
+                      lineageId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Customer_Acq_Cost]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Customer_Acq_Cost]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\Union All.Inputs[Union All Input 1].Columns[Week_Start_Date]"
+                      cachedDataType="date"
+                      cachedName="Week_Start_Date"
+                      lineageId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Week_Start_Date]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Week_Start_Date]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\Union All.Inputs[Union All Input 1].Columns[Week_Num]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="Week_Num"
+                      lineageId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Week_Num]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Week_Num]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\Union All.Inputs[Union All Input 1].Columns[Qtr]"
+                      cachedDataType="wstr"
+                      cachedLength="2"
+                      cachedName="Qtr"
+                      lineageId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Qtr]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Qtr]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\Union All.Inputs[Union All Input 1].Columns[current_year]"
+                      cachedDataType="i2"
+                      cachedName="current_year"
+                      lineageId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[current_year]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[current_year]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\Union All.Inputs[Union All Input 1].Columns[Credit_Limit]"
+                      cachedDataType="r4"
+                      cachedName="Credit_Limit"
+                      lineageId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Credit_Limit]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Credit_Limit]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\Union All.Inputs[Union All Input 1].Columns[Total_Revolving_Bal]"
+                      cachedDataType="i2"
+                      cachedName="Total_Revolving_Bal"
+                      lineageId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Total_Revolving_Bal]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Total_Revolving_Bal]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\Union All.Inputs[Union All Input 1].Columns[Total_Trans_Amt]"
+                      cachedDataType="cy"
+                      cachedName="Total_Trans_Amt"
+                      lineageId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Total_Trans_Amt]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Total_Trans_Amt]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\Union All.Inputs[Union All Input 1].Columns[Total_Trans_Vol]"
+                      cachedDataType="i4"
+                      cachedName="Total_Trans_Vol"
+                      lineageId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Total_Trans_Vol]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Total_Trans_Vol]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\Union All.Inputs[Union All Input 1].Columns[Avg_Utilization_Ratio]"
+                      cachedDataType="r4"
+                      cachedName="Avg_Utilization_Ratio"
+                      lineageId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Avg_Utilization_Ratio]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Avg_Utilization_Ratio]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\Union All.Inputs[Union All Input 1].Columns[Use Chip]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="Use Chip"
+                      lineageId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Use Chip]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Use Chip]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\Union All.Inputs[Union All Input 1].Columns[Exp Type]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Exp Type"
+                      lineageId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Exp Type]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Exp Type]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\Union All.Inputs[Union All Input 1].Columns[Interest_Earned]"
+                      cachedDataType="r4"
+                      cachedName="Interest_Earned"
+                      lineageId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Interest_Earned]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Interest_Earned]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\Union All.Inputs[Union All Input 1].Columns[Delinquent_Acc]"
+                      cachedDataType="bool"
+                      cachedName="Delinquent_Acc"
+                      lineageId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output].Columns[Delinquent_Acc]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Delinquent_Acc]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\CustomerDetail Load\Union All.Inputs[Union All Input 2]"
+                  hasSideEffects="true"
+                  name="Union All Input 2">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\Union All.Inputs[Union All Input 2].Columns[Client_Num]"
+                      cachedDataType="i4"
+                      cachedName="Client_Num"
+                      lineageId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Client_Num]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Client_Num]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\Union All.Inputs[Union All Input 2].Columns[Card_Category]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="Card_Category"
+                      lineageId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Card_Category]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Card_Category]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\Union All.Inputs[Union All Input 2].Columns[Annual_Fees]"
+                      cachedDataType="i2"
+                      cachedName="Annual_Fees"
+                      lineageId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Annual_Fees]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Annual_Fees]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\Union All.Inputs[Union All Input 2].Columns[Activation_30_Days]"
+                      cachedDataType="bool"
+                      cachedName="Activation_30_Days"
+                      lineageId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Activation_30_Days]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Activation_30_Days]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\Union All.Inputs[Union All Input 2].Columns[Customer_Acq_Cost]"
+                      cachedDataType="i2"
+                      cachedName="Customer_Acq_Cost"
+                      lineageId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Customer_Acq_Cost]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Customer_Acq_Cost]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\Union All.Inputs[Union All Input 2].Columns[Week_Start_Date]"
+                      cachedDataType="date"
+                      cachedName="Week_Start_Date"
+                      lineageId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Week_Start_Date]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Week_Start_Date]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\Union All.Inputs[Union All Input 2].Columns[Qtr]"
+                      cachedDataType="wstr"
+                      cachedLength="2"
+                      cachedName="Qtr"
+                      lineageId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Qtr]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Qtr]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\Union All.Inputs[Union All Input 2].Columns[current_year]"
+                      cachedDataType="i2"
+                      cachedName="current_year"
+                      lineageId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[current_year]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[current_year]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\Union All.Inputs[Union All Input 2].Columns[Credit_Limit]"
+                      cachedDataType="r4"
+                      cachedName="Credit_Limit"
+                      lineageId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Credit_Limit]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Credit_Limit]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\Union All.Inputs[Union All Input 2].Columns[Total_Revolving_Bal]"
+                      cachedDataType="i2"
+                      cachedName="Total_Revolving_Bal"
+                      lineageId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Total_Revolving_Bal]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Total_Revolving_Bal]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\Union All.Inputs[Union All Input 2].Columns[Total_Trans_Amt]"
+                      cachedDataType="cy"
+                      cachedName="Total_Trans_Amt"
+                      lineageId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Total_Trans_Amt]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Total_Trans_Amt]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\Union All.Inputs[Union All Input 2].Columns[Avg_Utilization_Ratio]"
+                      cachedDataType="r4"
+                      cachedName="Avg_Utilization_Ratio"
+                      lineageId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Avg_Utilization_Ratio]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Avg_Utilization_Ratio]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\Union All.Inputs[Union All Input 2].Columns[Use Chip]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="Use Chip"
+                      lineageId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Use Chip]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Use Chip]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\Union All.Inputs[Union All Input 2].Columns[Exp Type]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Exp Type"
+                      lineageId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Exp Type]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Exp Type]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\Union All.Inputs[Union All Input 2].Columns[Interest_Earned]"
+                      cachedDataType="r4"
+                      cachedName="Interest_Earned"
+                      lineageId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Interest_Earned]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Interest_Earned]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\Union All.Inputs[Union All Input 2].Columns[Delinquent_Acc]"
+                      cachedDataType="bool"
+                      cachedName="Delinquent_Acc"
+                      lineageId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Delinquent_Acc]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Delinquent_Acc]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\Union All.Inputs[Union All Input 2].Columns[Week_Num]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Week_Num"
+                      lineageId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Week_Num]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Week_Num]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\CustomerDetail Load\Union All.Inputs[Union All Input 2].Columns[Total_Trans_Ct]"
+                      cachedDataType="i4"
+                      cachedName="Total_Trans_Ct"
+                      lineageId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output].Columns[Total_Trans_Ct]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Total_Trans_Vol]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\CustomerDetail Load\Union All.Inputs[Union All Input 3]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Union All Input 3">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1]"
+                  name="Union All Output 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Client_Num]"
+                      dataType="i4"
+                      lineageId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Client_Num]"
+                      name="Client_Num" />
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Card_Category]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Card_Category]"
+                      name="Card_Category" />
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Annual_Fees]"
+                      dataType="i2"
+                      lineageId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Annual_Fees]"
+                      name="Annual_Fees" />
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Activation_30_Days]"
+                      dataType="bool"
+                      lineageId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Activation_30_Days]"
+                      name="Activation_30_Days" />
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Customer_Acq_Cost]"
+                      dataType="i2"
+                      lineageId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Customer_Acq_Cost]"
+                      name="Customer_Acq_Cost" />
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Week_Start_Date]"
+                      dataType="date"
+                      lineageId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Week_Start_Date]"
+                      name="Week_Start_Date" />
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Week_Num]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Week_Num]"
+                      name="Week_Num" />
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Qtr]"
+                      dataType="wstr"
+                      length="2"
+                      lineageId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Qtr]"
+                      name="Qtr" />
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[current_year]"
+                      dataType="i2"
+                      lineageId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[current_year]"
+                      name="current_year" />
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Credit_Limit]"
+                      dataType="r4"
+                      lineageId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Credit_Limit]"
+                      name="Credit_Limit" />
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Total_Revolving_Bal]"
+                      dataType="i2"
+                      lineageId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Total_Revolving_Bal]"
+                      name="Total_Revolving_Bal" />
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Total_Trans_Amt]"
+                      dataType="cy"
+                      lineageId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Total_Trans_Amt]"
+                      name="Total_Trans_Amt" />
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Total_Trans_Vol]"
+                      dataType="i4"
+                      lineageId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Total_Trans_Vol]"
+                      name="Total_Trans_Vol" />
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Avg_Utilization_Ratio]"
+                      dataType="r4"
+                      lineageId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Avg_Utilization_Ratio]"
+                      name="Avg_Utilization_Ratio" />
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Use Chip]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Use Chip]"
+                      name="Use Chip" />
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Exp Type]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Exp Type]"
+                      name="Exp Type" />
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Interest_Earned]"
+                      dataType="r4"
+                      lineageId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Interest_Earned]"
+                      name="Interest_Earned" />
+                    <outputColumn
+                      refId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Delinquent_Acc]"
+                      dataType="bool"
+                      lineageId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1].Columns[Delinquent_Acc]"
+                      name="Delinquent_Acc" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\CustomerDetail Load.Paths[Flat File Source Output]"
+              endId="Package\CustomerDetail Load\Union All.Inputs[Union All Input 1]"
+              name="Flat File Source Output"
+              startId="Package\CustomerDetail Load\CreditCardDetail 1.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\CustomerDetail Load.Paths[Flat File Source Output1]"
+              endId="Package\CustomerDetail Load\Union All.Inputs[Union All Input 2]"
+              name="Flat File Source Output"
+              startId="Package\CustomerDetail Load\Credit Card Details 2.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\CustomerDetail Load.Paths[Union All Output 1]"
+              endId="Package\CustomerDetail Load\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Union All Output 1"
+              startId="Package\CustomerDetail Load\Union All.Outputs[Union All Output 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="180,42.6666666666667"
+          Id="Package\CustomerDetail Load"
+          TopLeft="131.249998044223,93.0526333304324" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\CustomerDetail Load">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="168,42.6666666666667"
+          Id="Package\CustomerDetail Load\CreditCardDetail 1"
+          TopLeft="84.9999987334013,91.0000017128493" />
+        <NodeLayout
+          Size="178.666666666667,42.6666666666667"
+          Id="Package\CustomerDetail Load\Credit Card Details 2"
+          TopLeft="349.999994784594,75.9473698505735" />
+        <NodeLayout
+          Size="174.666666666667,42.6666666666667"
+          Id="Package\CustomerDetail Load\OLE DB Destination"
+          TopLeft="193.124997122213,283.263163226463" />
+        <NodeLayout
+          Size="122.666666666667,42.6666666666667"
+          Id="Package\CustomerDetail Load\Union All"
+          TopLeft="228.749996591359,187.543862739979" />
+        <EdgeLayout
+          Id="Package\CustomerDetail Load.Paths[Flat File Source Output]"
+          TopLeft="168.999998733401,133.666668379516">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="101.97222008018,53.8771943604627"
+              Start="0,0"
+              End="101.97222008018,46.3771943604627">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.9100979473985" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27.9100979473985"
+                    Point2="0,31.9100979473985"
+                    Point3="4,31.9100979473985" />
+                  <mssgle:LineSegment
+                    End="97.9722200801802,31.9100979473985" />
+                  <mssgle:CubicBezierSegment
+                    Point1="97.9722200801802,31.9100979473985"
+                    Point2="101.97222008018,31.9100979473985"
+                    Point3="101.97222008018,35.9100979473985" />
+                  <mssgle:LineSegment
+                    End="101.97222008018,46.3771943604627" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\CustomerDetail Load.Paths[Flat File Source Output1]"
+          TopLeft="439.333328117927,118.61403651724">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-130.138887082123,68.9298262227385"
+              Start="0,0"
+              End="-130.138887082123,61.4298262227385">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.8253906383601" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,36.8253906383601"
+                    Point2="0,40.8253906383601"
+                    Point3="-4,40.8253906383601" />
+                  <mssgle:LineSegment
+                    End="-126.138887082123,40.8253906383601" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-126.138887082123,40.8253906383601"
+                    Point2="-130.138887082123,40.8253906383601"
+                    Point3="-130.138887082123,44.8253906383601" />
+                  <mssgle:LineSegment
+                    End="-130.138887082123,61.4298262227385" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\CustomerDetail Load.Paths[Union All Output 1]"
+          TopLeft="290.083329924693,230.210529406645">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-9.62499946914602,53.0526338198179"
+              Start="0,0"
+              End="-9.62499946914602,45.5526338198179">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.526316909909" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.526316909909"
+                    Point2="0,26.526316909909"
+                    Point3="-4,26.526316909909" />
+                  <mssgle:LineSegment
+                    End="-5.62499946914602,26.526316909909" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-5.62499946914602,26.526316909909"
+                    Point2="-9.62499946914602,26.526316909909"
+                    Point3="-9.62499946914602,30.526316909909" />
+                  <mssgle:LineSegment
+                    End="-9.62499946914602,45.5526338198179" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\CustomerDetail Load\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
